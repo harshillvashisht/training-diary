@@ -11,3 +11,8 @@ training-diary/
 ├─ images/ 
 │ ├─ setup.png
 │ ├─ ubuntu.png
+
+
+## 🗓️ Daily Entries
+- [2025-June-25](training-diary/2025-June-25.md)
+
