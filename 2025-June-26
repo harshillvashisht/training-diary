@@ -1,0 +1,31 @@
+# Linux Command Practice
+**Date:** 2025-06-26
+
+Today I learned the following basic Linux commands:
+
+---
+
+## 📁 Navigation and Directory Operations
+- **`ls`** — List files and directories
+- **`mkdir`** — Create a new directory
+- **`touch`** — Create a new empty file
+- **`cat`** — View the contents of a file
+- **`cd ..`** — Move up one directory
+- **`pwd`** — Print the current working directory
+- **`whoami`** — Print the current user
+
+---
+
+## 🗄️ File Viewing and Editing
+- **`head`** — View the first lines of a file
+- **`tail`** — View the last lines of a file
+- **`nano`** — Open a file in the Nano text editor
+- **`vim`** — Open a file in the Vim text editor
+
+
+
+## ❌ Deleting Files and Folders
+- **`rm`** — Delete a file
+- **`rmdir`** — Delete an empty directory
+
+---
