@@ -1,0 +1,107 @@
+# Linux Command Practice  
+**Date:** 2025-06-27
+
+Today I performed various tasks involving file permissions, user management, and shell scripting in Linux.
+
+---
+
+## 🔐 File Permissions and Ownership
+- **`chmod 777 harshill.txt`** — Gave full read, write, and execute permissions to everyone.
+- **`sudo useradd jagjit`** — Added a new user named `jagjit`.
+- **`sudo chown jagjit harshill.txt`** — Changed ownership of `harshill.txt` to user `jagjit`.
+- **`sudo chgrp jagjit harshill.txt`** — Changed the group of `harshill.txt` to `jagjit`.
+
+📸 *Screenshot:*  
+![Permissions and Ownership](images/permissions_ownership.png)
+
+---
+
+## 📝 Shell Script Creation
+- **`nano script.sh`** — Created a shell script file.
+- **Script contents:**
+  ```bash
+  #!/bin/bash
+  echo "Welcome"
+  echo "Enter two numbers:"
+  read a
+  read b
+  sum=$((a + b))
+  echo "Sum is $sum"
+  ```
+
+📸 *Screenshot:*  
+![Script Creation](images/script_creation.png)
+
+---
+
+## 🧠 Logic in Script
+- **If-Else Block:** Compared two numbers and printed the greater one.
+  ```bash
+  if [ $a -gt $b ]
+  then
+      echo "$a is greater"
+  else
+      echo "$b is greater"
+  fi
+  ```
+
+- **For Loop:** Printed numbers from 1 to 5.
+  ```bash
+  for i in {1..5}
+  do
+      echo "Number: $i"
+  done
+  ```
+
+📸 *Screenshot:*  
+![If-Else and Loop](images/logic_blocks.png)
+
+---
+
+## ⚙️ Executing and Modifying Script
+- **`chmod -x script.sh`** — Removed execute permission.
+- **`chmod +x script.sh`** — Re-added execute permission.
+- **`./script.sh`** — Ran the script.
+
+📸 *Screenshot:*  
+![Script Execution](images/script_execution.png)
+
+---
+
+## 🧮 Additional Scripts
+
+### ➕ Calculator Script
+Performed basic arithmetic operations:
+```bash
+echo "Enter two numbers:"
+read a
+read b
+echo "Addition: $((a + b))"
+echo "Subtraction: $((a - b))"
+echo "Multiplication: $((a * b))"
+echo "Division: $((a / b))"
+```
+
+📸 *Screenshot:*  
+![Calculator](images/calculator_script.png)
+
+---
+
+### 📂 File Existence Check Script
+Checked whether a given file exists:
+```bash
+echo "Enter filename:"
+read file
+
+if [ -f "$file" ]
+then
+    echo "File exists."
+else
+    echo "File does not exist."
+fi
+```
+
+📸 *Screenshot:*  
+![File Checker](images/file_check_script.png)
+
+---
