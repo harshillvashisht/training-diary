@@ -13,6 +13,3 @@ training-diary/
 
 
 
-## 🗓️ Daily Entries
-- [2025-June-25](2025-June-25.md)
-- [2025-June-26](2025-June-26.md)
