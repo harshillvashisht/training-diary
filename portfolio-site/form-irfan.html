@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work With Me Form</title>
+  <link rel="stylesheet" href="style2.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      padding: 40px;
+      margin: 0;
+    }
+
+    .form-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    .radio-group label {
+      font-weight: normal;
+    }
+
+    .button-submit,
+    .button-reset {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .button-submit {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .button-submit:hover {
+      background-color: #0056b3;
+    }
+
+    .button-reset {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .button-reset:hover {
+      background-color: #a71d2a;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .col-half {
+      flex: 1 1 calc(50% - 10px);
+    }
+
+    @media (max-width: 600px) {
+      .col-half {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* Modal popup styles */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+
+    .modal p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .modal button {
+      margin-top: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .modal button:hover {
+      background-color: #1e7e34;
+    }
+  </style>
+</head>
+<body>
+   <header>
+    <div class="logo">Harshill</div>
+    <div >
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="location.html">location</a></li>
+          <li><a href="form-irfan.html" target="_blank">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="form-container">
+    <form id="profile-form">
+      <!-- Form Fields (same as before) -->
+      <div class="form-group">
+        <label for="photo">Upload Photo</label>
+        <input type="file" id="photo" name="photo" accept="image/png, image/jpeg, image/gif" />
+        <small>JPG, PNG or GIF. Max size 5MB.</small>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-half">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required />
+        </div>
+
+        <div class="form-group col-half">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-half">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" />
+        </div>
+
+        <div class="form-group col-half">
+          <label>Gender</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="male" /> Male</label>
+            <label><input type="radio" name="gender" value="female" /> Female</label>
+            <label><input type="radio" name="gender" value="prefer-not" /> Prefer not to say</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-half">
+          <label for="experience">City</label>
+          <select id="experience" name="experience">
+            <option value="">Select</option>
+            <option value="ludhiana">Ludhiana</option>
+            <option value="jalandhar">Jalandhar</option>
+            <option value="moga">Moga</option>
+            <option value="patiala">Patiala</option>
+          </select>
+        </div>
+
+        <div class="form-group col-half">
+          <label for="availability">Availability Status</label>
+          <input type="text" id="availability" name="availability" placeholder="Available for hire" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tagline">Tagline</label>
+        <input type="text" id="tagline" name="tagline" placeholder="Full Stack Developer & Designer" />
+      </div>
+
+      <div class="form-group">
+        <label for="about">About</label>
+        <textarea id="about" name="about" placeholder="Tell me about your experience, skills, goals, etc."></textarea>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-half">
+          <label for="linkedin">LinkedIn URL</label>
+          <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile" />
+        </div>
+
+        <div class="form-group col-half">
+          <label for="github">GitHub URL</label>
+          <input type="url" id="github" name="github" placeholder="https://github.com/yourhandle" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-half">
+          <label for="resume">Resume URL</label>
+          <input type="url" id="resume" name="resume" placeholder="https://example.com/resume.pdf" />
+        </div>
+
+        <div class="form-group col-half">
+          <label for="website">Personal Website</label>
+          <input type="url" id="website" name="website" placeholder="https://yourwebsite.com" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="button-submit">Save Profile</button>
+        <button type="reset" class="button-reset">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal Popup -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <h2>Success!</h2>
+      <p>Your data has been saved successfully.</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('profile-form');
+    const modal = document.getElementById('modal');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent actual form submission
+      modal.style.display = 'flex';
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+  </script>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Harshill</p>
+    <div class="footer-links">
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
